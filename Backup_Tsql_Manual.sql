@@ -8,10 +8,10 @@ DECLARE @Filename VARCHAR(max),@Filepath varchar(max),
 ----
 ----
 
-SET @dbname='UiPath' ---Enter database name
-SET @Filepath='G:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\Full\' ---Enter backup directory ending with "\"
-SET @pfilename='D1DBUIOP001.associa.corp' --- Enter dbmail profile name /*select * from msdb.dbo.sysmail_profile*/
-SET @emailrec='avishwakarma@associa.us' --- Enter receiver emailID
+SET @dbname='dbName' ---Enter database name
+SET @Filepath='E:\MSSQL\' ---Enter backup directory ending with "\"
+SET @pfilename='dbMailProfile' --- Enter dbmail profile name /*select * from msdb.dbo.sysmail_profile*/
+SET @emailrec='myname@example.com' --- Enter receiver emailID
 
 --- User input end here ---
 
