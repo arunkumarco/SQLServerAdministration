@@ -1,3 +1,4 @@
+---- Get the status of Backup and Restore completions. 
 ---- Database Restoration and Backup Progress ----
 SELECT SESSION_ID AS SPID
 	,COMMAND
@@ -11,20 +12,3 @@ WHERE R.COMMAND IN (
 		'BACKUP DATABASE'
 		,'RESTORE DATABASE'
 		)
-		
----- Dead Lock		
-		
-SELECT CNTR_VALUE AS NUMOFDEADLOCKS
-FROM SYS.DM_OS_PERFORMANCE_COUNTERS
-WHERE OBJECT_NAME = 'SQLSERVER:LOCKS'
-	AND COUNTER_NAME = 'NUMBER OF DEADLOCKS/SEC'
-	AND INSTANCE_NAME = '_TOTAL'
-	
----- Server Property Name -----	
-SELECT HOST_NAME() AS 'host_name()'
-	,@@servername AS 'ServerName\InstanceName'
-	,SERVERPROPERTY('servername') AS 'ServerName'
-	,SERVERPROPERTY('machinename') AS 'Windows_Name'
-	,SERVERPROPERTY('ComputerNamePhysicalNetBIOS') AS 'NetBIOS_Name'
-	,SERVERPROPERTY('instanceName') AS 'InstanceName'
-	,SERVERPROPERTY('IsClustered') AS 'IsClustered'
