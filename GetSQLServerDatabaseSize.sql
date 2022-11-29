@@ -1,1 +1,1 @@
-Select * from sys.databases.
+Select * from sys.databases;
